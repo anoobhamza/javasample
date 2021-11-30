@@ -26,6 +26,7 @@ phases:
       - echo $JAVA_HOME
       - echo $HOST
       - mvn sonar:sonar -Dsonar.login=0509856fd81ea530443388a7a684302db0c31327 -Dsonar.host.url=http://13.82.226.119:9000/sonar/ -Dsonar.projectKey=awssonarexample -Dsonar.java.binaries=./target/classes -Dsonar.sources=src -Dsonar.issuesReport.html.enable=true
+      - ls -ltr
 artifacts:
   type: zip
   files: '**/*'
