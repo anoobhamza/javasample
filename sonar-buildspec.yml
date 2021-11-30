@@ -27,6 +27,11 @@ phases:
       - echo $HOST
       - mvn sonar:sonar -Dsonar.login=0509856fd81ea530443388a7a684302db0c31327 -Dsonar.host.url=http://13.82.226.119:9000/sonar/ -Dsonar.projectKey=awssonarexample
       - ls -ltr
+reports:
+  arn:aws:codebuild:ap-south-1:150805400892:report-group/testng:
+    files:
+      - testng.xml
+    file-format: "TestNGXML"
 artifacts:
   type: zip
   files: '**/*'
